@@ -14,7 +14,8 @@ def main():
         result.to_excel(out + ".xlsx")
     except PermissionError:
         print("Please close " + out + ".xlsx and run again")
-    print("Data written to", out + ".xlsx")
+    finally:
+        print("Data written to", out + ".xlsx")
 
 
 def get_names(pdf_name) -> list:
